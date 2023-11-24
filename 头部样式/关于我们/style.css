@@ -1,0 +1,89 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(45deg, #2f5e72, #9d2b2b);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+@font-face {
+    font-family: 'myfont';
+    src: url('/字体/1-otf/Typefesse_Claire-Obscure.otf');
+}
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    top: 10px;
+    /*圆角*/
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+.logo-text {
+    font-family: 'myfont';
+    font-size: 2em;
+    font-weight: bold;
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    cursor: pointer;
+}
+.logo-text:hover {
+    /*外发光*/
+    text-shadow: 0 0 7px #ffffff;
+    color: #000000;
+}
+.flex-item a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: color 0.3s ease, transform 0.3s ease, font-size 0.3s ease;
+}
+
+.flex-item a:hover {
+    font-size: 1.5em;
+    color: #2d2121;
+}
+
+p, h1, h4 {
+    color: #dfe6e9;
+}
+
+h1 {
+    margin-bottom: 0.5em;
+}
+.flex {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.about, .contact {
+    text-align: center;
+    margin: 20px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+}
+
+.box-text {
+    margin: 0 auto;
+    width: 80%;
+}
+
+.source {
+    text-align: center;
+    margin: 20px;
+    padding: 20px;
+    background-color: rgba(226, 63, 63, 0.1);
+    border-radius: 15px;
+}
+

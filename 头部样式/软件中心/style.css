@@ -1,0 +1,233 @@
+/* 基础样式 */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-width: 600px;
+    background: linear-gradient(45deg, #003973, #e4e425, #2C3E50, #232526);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/*字体导入*/
+@font-face {
+    font-family: 'myfont';
+    src: url('/字体/1-otf/Typefesse_Claire-Obscure.otf');
+}
+
+@font-face {
+    font-family: 'p';
+    src: url('/字体/黄引齐招牌体/黄引齐招牌体.ttf');
+}
+
+@font-face {
+    font-family: 'h';
+    src: url('/字体/刘欢卡通手书/刘欢卡通手书2.0.ttf');
+}
+
+@font-face {
+    font-family: 'liebiao';
+    src: url('/字体/刘欢卡通手书/刘欢卡通手书2.0.ttf');
+}
+
+/* logo样式 */
+.logo {
+    height: 50px;
+    width: 50px;
+    transition: 0.3s;
+    margin-left: 20px;
+}
+
+.logo:hover {
+    width: 65px;
+    height: 65px;
+    /*旋转360度*/
+    transform: rotate(360deg);
+}
+
+.logotext{
+    font-family: 'myfont';
+    font-size: 30px;
+    font-weight: bold;
+    color: black;
+    /*靠左对齐*/
+    text-align: left;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.logotext:hover{
+    color: rgb(255, 255, 255);
+    font-size: 32px;
+    text-shadow: 0 0 10px rgb(0, 0, 0);
+}
+
+/* 头部样式 */
+.toubu {
+    position: fixed; /* 固定位置 */
+    top: 0; /* 顶部对齐 */
+    left: 0; /* 左侧对齐 */
+    right: 0; /* 右侧对齐 */
+    z-index: 1000; /* 确保在顶层 */
+    /*背景模糊*/
+    backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px;
+    margin: 10px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.526);
+    transition: 0.3s;
+}
+
+
+.toubu:hover {
+    height: 60px;
+    background-color: burlywood;
+    /*底部阴影*/
+    box-shadow: 0 0 10px rgb(0, 0, 0);
+}
+
+/* 列表样式 */
+.liebiao1{
+    visibility: hidden;
+    width: 0;
+    height: 0;
+}
+
+.liebiao {
+    display: inline-block;
+    width: auto; /* 调整宽度以适应内容 */
+}
+
+.liebiao a {
+    font-family: 'liebiao';
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+    font-weight: bold;
+    line-height: 50px;
+    vertical-align: middle;
+    display: inline-block;
+    margin: 0 auto;
+    float: left;
+    margin-left: 20px;
+    margin-right: 20px;
+    transition: 0.3s;
+}
+
+.liebiao a:hover {
+    color: white;
+    font-size: 23px;
+}
+
+/* 搜索框样式 */
+.sousuo {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.shuru {
+    width: 200px;
+    height: 30px;
+    border-radius: 10px;
+    background-color: rgba(255, 0, 0, 0.405);
+    border: none;
+}
+
+.shuru::placeholder {
+    color: black;
+}
+
+.shuru:hover {
+    background-color: rgba(255, 255, 255, 0.88);
+}
+
+/* 按钮样式 */
+button {
+    background-color: rgb(89, 89, 255);
+    color: aliceblue;
+    display: inline-block;
+    height: 30px;
+    width: 100px;
+    border-radius: 10px;
+    border: none;
+    transition: 0.3s;
+}
+
+button:hover {
+    color: #000;
+    background-color: rgb(255, 255, 255);
+    /*放大*/
+    transform: scale(1.1);
+}
+
+button:active {
+    color: rgb(255, 255, 255);
+    background-color: rgb(128, 0, 0);
+    /*放大*/
+    transform: scale(1.3);
+}
+
+/* 主体样式 */
+.products-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* 为盒子之间设置 10px 的间距 */
+    margin-top: 70px;
+    /*右边距*/
+    margin-right: 50px;
+    margin-left: 50px;
+}
+
+.product-box {
+    width: 200px; /* 商品盒子的宽度 */
+    height: 300px; /* 商品盒子的高度 */
+    background-color: #f0f0f05d; /* 商品盒子的背景颜色 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ddd; /* 商品盒子的边框 */
+    border-radius: 10px; /* 商品盒子的圆角 */
+    padding: 10px; /* 商品盒子的内边距 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 商品盒子的阴影 */
+    transition: 0.3s;
+    flex-direction: column; /* 垂直排列子元素 */
+    overflow: hidden; /* 防止内容溢出 */
+    text-align: center;
+}
+
+.product-box:hover {
+    /* 商品盒子的阴影 */
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+    /*向上移动10px*/
+    transform: translateY(-10px);
+}
+
+
+.product-box img {
+    width: 100px; /* 图片宽度占满盒子 */
+    height: auto; /* 高度自动 */
+    display: block; /* 防止底部出现间隙 */
+    border-bottom: 1px solid #ddd; /* 图片下方的边框 */
+}
+
+.product-box h3, .product-box p {
+    margin: 10px 0;
+    color: #ffffff;
+    font-family: 'liebiao';
+}
+
+.products-container a {
+    text-decoration: none; /* 移除下划线 */
+}
+
