@@ -1,0 +1,494 @@
+/* 基础样式 */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-width: 600px;
+    background: linear-gradient(45deg, #003973, #E5E5BE, #2C3E50, #232526);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+
+/*加载动画*/
+
+
+
+/*字体导入*/
+@font-face {
+    font-family: 'myfont';
+    src: url('字体/1-otf/Typefesse_Claire-Obscure.otf');
+}
+
+@font-face {
+    font-family: 'p';
+    src: url('字体/黄引齐招牌体/黄引齐招牌体.ttf');
+}
+
+@font-face {
+    font-family: 'h';
+    src: url('字体/刘欢卡通手书/刘欢卡通手书2.0.ttf');
+}
+
+@font-face {
+    font-family: 'liebiao';
+    src: url('字体/刘欢卡通手书/刘欢卡通手书2.0.ttf');
+}
+
+/* logo样式 */
+.logo {
+    height: 50px;
+    width: 50px;
+    transition: 0.3s;
+    margin-left: 20px;
+}
+
+.logo:hover {
+    width: 65px;
+    height: 65px;
+    /*旋转360度*/
+    transform: rotate(360deg);
+}
+
+.logotext{
+    font-family: 'myfont';
+    font-size: 30px;
+    font-weight: bold;
+    color: black;
+    /*靠左对齐*/
+    text-align: left;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.logotext:hover{
+    color: rgb(255, 255, 255);
+    font-size: 32px;
+    text-shadow: 0 0 10px rgb(0, 0, 0);
+}
+
+/* 头部样式 */
+.toubu {
+    position: fixed; /* 固定位置 */
+    top: 0; /* 顶部对齐 */
+    left: 0; /* 左侧对齐 */
+    right: 0; /* 右侧对齐 */
+    z-index: 1000; /* 确保在顶层 */
+    /*背景模糊*/
+    backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px;
+    margin: 10px;
+    min-height: 50px;
+    background-color: rgba(255, 255, 255, 0.526);
+    transition: 0.3s;
+}
+
+
+.toubu:hover {
+    background-color: burlywood;
+    /*底部阴影*/
+    box-shadow: 0 0 10px rgb(0, 0, 0);
+}
+
+/* 列表样式 */
+
+.liebiao{
+    flex: 1;
+    visibility: hidden;
+    position: fixed;
+    /*居中*/
+    top: 50%;
+}
+
+.liebiao1 img{
+    height: 50px;
+    width: 50px;
+    transition: 0.3s;
+}
+
+.liebiao1 {
+    display: inline-block;
+    width: auto; /* 调整宽度以适应内容 */
+}
+
+.liebiao1 a {
+    font-family: 'liebiao';
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+    font-weight: bold;
+    line-height: 50px;
+    vertical-align: middle;
+    display: inline-block;
+    margin: 0 auto;
+    float: left;
+    margin-left: 20px;
+    margin-right: 20px;
+    transition: 0.3s;
+}
+
+.liebiao a:hover {
+    color: white;
+    font-size: 23px;
+}
+
+/* 搜索框样式 */
+.sousuo {
+    /*隐藏*/
+    visibility: hidden;
+}
+
+.shuru {
+    visibility: hidden;
+}
+
+.shuru::placeholder {
+    visibility: hidden;
+}
+
+/* 按钮样式 */
+button {
+    background-color: rgb(89, 89, 255);
+    color: aliceblue;
+    display: inline-block;
+    height: 30px;
+    width: 100px;
+    border-radius: 10px;
+    border: none;
+    transition: 0.3s;
+}
+
+button:hover {
+    color: #000;
+    background-color: rgb(255, 255, 255);
+    /*放大*/
+    transform: scale(1.1);
+}
+
+button:active {
+    color: rgb(255, 255, 255);
+    background-color: rgb(128, 0, 0);
+    /*放大*/
+    transform: scale(1.3);
+}
+
+/* 主体样式 */
+.zhuti {
+    width: 90%;
+    margin: 100px auto 0; /* 增加顶部外边距 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background-color: rgba(254, 254, 254, 0.542);
+    transition: 0.3s;
+    /* 其他样式 */
+}
+
+
+.lunbo{
+    position: relative;
+    width: 50%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.lunbo img{
+    width: 50%;
+    height: 50%;
+    border-radius: 10px;
+    transform: translateX(-100%);
+}
+
+.lunbo .arrow{
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    font-size: 2em;
+    background: none;
+    border: none;
+}
+
+.lunbo .arrow.left{
+    left: 10px;
+}
+
+.lunbo .arrow.right{
+    right: 10px;
+}
+
+/*介绍样式*/
+.jieshao{
+    margin: 30px;
+}
+
+.jieshao h1{
+    font-family: 'h';
+    font-size: 50px;
+}
+
+.jieshao p{
+    font-family: 'p';
+    font-size: 20px;
+    color: black;
+    /*靠左对齐*/
+    text-align: left;
+    transition: 0.3s;
+}
+
+.xiexie{
+    font-family: p;
+    color: red;
+}
+
+.Mylogo {
+    /*放在右边*/
+    float: right;
+    height: 200px;
+    width: 200px;
+    transition: 0.3s;
+}
+
+.Mylogo:hover {
+    /*向上移动*/
+    transform: translateY(-10px);
+    /*png图片描边阴影，模糊程度减弱*/
+    filter: drop-shadow(0 10px 5px rgba(0, 0, 0));
+    
+}
+
+.jieshaojiaocheng{
+    /*加上下划线*/
+    text-decoration: underline rgb(50, 108, 255);
+}
+
+/* 留言样式 */
+.liuyan {
+    /*上边距*/
+    margin: 10px auto auto auto;
+    width: 90%;
+    /*水平居中*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    background-color: rgba(254, 254, 254, 0.542);
+    transition: 0.3s;
+}
+
+.liuyan textarea{
+    margin-top: 10px;
+    width: 90%;
+    height: 60px;
+    border-radius: 8px;
+    background-color: rgba(255, 0, 0, 0.405);
+    border: none;
+    transition: 0.3s;
+}
+
+.liuyan button{
+    background-color: rgb(89, 89, 255);
+    color: aliceblue;
+    display: inline-block;
+    height: 40px;
+    width: 90%;
+    margin: 10px auto 10px auto;
+    border-radius: 8px;
+    border: none;
+    transition: 0.3s;
+}
+
+
+.xianshiliuyan {
+    width: 400px; /* 固定宽度 */
+    height: 100px; /* 固定高度 */
+    border-radius: 10px;
+    overflow: auto; /* 超出内容显示滚动条 */
+    border: 1px solid #ffffff; /* 边框样式 */
+    margin-top: 10px; /* 与留言表单的间距 */
+    padding: 5px; /* 内部间距 */
+    background-color: rgba(0, 0, 0, 0.276); /* 背景颜色 */
+}
+
+.liuyan h1{
+    margin: 10px auto 10px auto;
+    font-family: 'h';
+    font-size: 50px;
+}
+
+/* 底部样式 */
+.dibu {
+    margin: 10px auto;
+    width: 100%;
+    display: flex;
+    flex-direction: row; /* 改为水平排列 */
+    align-items: center; /* 水平居中对齐 */
+    justify-content: center; /* 垂直居中对齐 */
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.372);
+    color: #ffffff;
+    transition: 0.3s;
+}
+
+.dibu:hover {
+    border-radius: 100px 100px 10px 10px;
+    background-color: rgba(255, 255, 255, 0.461);
+    color: #000;
+}
+
+.联系我们, .友情链接 {
+    flex: 1;
+    margin: 30px auto 30px 100px;
+    text-align: left; /* 将文本对齐设置为左对齐 */
+}
+
+.联系我们 h1{
+    font-family: 'h';
+    font-size: 30px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.联系我们 p{
+    font-family: 'p';
+    font-size: 20px;
+    /*靠左对齐*/
+    text-align: left;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.友情链接 h1{
+    font-family: 'h';
+    font-size: 30px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.友情链接 p{
+    margin-top: 30px;
+}
+
+
+.友情链接 a{
+    font-family: 'p';
+    font-size: 20px;
+    text-align: left;
+    color: inherit; /* 链接颜色与周围文本一致 */
+    text-decoration: none; /* 去掉下划线 */
+    display: block;       /* 使链接成为块级元素，以便于应用垂直间距 */
+    margin-bottom: 10px;
+    transition: 0.3s;
+}
+
+
+.友情链接 a:hover{
+    color: rgb(255, 255, 255);
+    font-size: 23px;
+    text-shadow: 0 0 10px rgb(0, 0, 0);
+}
+
+.hover-underline-animation {
+    display: inline-block; /* 使元素适应内容宽度 */
+    position: relative; /* 用于定位伪元素 */
+    cursor: pointer;
+}
+
+.hover-underline-animation::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px; /* 下划线厚度 */
+    left: 0;
+    bottom: -3px; /* 下划线位置 */
+    background-color: black; /* 下划线颜色 */
+    transform: scaleX(0);
+    transform-origin: bottom right; /* 动画起始方向 */
+    transition: transform 0.3s ease-out;
+}
+
+.hover-underline-animation:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left; /* 动画结束方向 */
+}
+
+.erweima{
+    /*在最下方*/
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /*右边距*/
+    margin: 30px 50px 30px auto;
+}
+
+.gzh{
+    width: 80%;
+    margin-top: 30px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.gzh:hover{
+    transform: translateY(-10px);
+    /*底部阴影*/
+    box-shadow: 0 10px 20px rgb(0, 0, 0);
+}
+
+.tianjia{
+    /*内容靠右均匀分布*/
+    display: flex;
+    justify-content: center;
+}
+
+.wx, .qq {
+    margin: 0 30px; /* 水平方向上各增加 10px 的外边距 */
+}
+
+
+.wx{
+    width: 30%;
+    margin-top: 30px;
+    border-radius: 5px;
+    
+    transition: 0.3s;
+}
+
+.wx:hover{
+    transform: translateY(-10px);
+    /*底部阴影*/
+    box-shadow: 0 10px 20px rgb(0, 0, 0);
+}
+
+.qq{
+    width: 30%;
+    margin-top: 30px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.qq:hover{
+    transform: translateY(-10px);
+    /*底部阴影*/
+    box-shadow: 0 10px 20px rgb(0, 0, 0);
+}
+
+
+
+

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--根据不同设备选择不同的css文件，分辨设是用设备的标签，不是使用屏幕的宽度-->
+    <meta name="keywords" content="AiQiji,aiqiji,吉吉发掘,爱奇迹,爱奇迹软件,爱奇迹博客,爱奇迹官网,爱奇迹软件官网,爱奇迹博客官网,爱奇迹软件下载,爱奇迹博客下载,爱奇迹软件官网下载,爱奇迹博客官网下载">
+    <link rel="stylesheet" media="screen and (min-width: 562px) and (max-width: 1107px)" href="styleSJ.css">
+    <link rel="stylesheet" media="screen and (min-width: 1107px)" href="styleDN.css">
+    <link rel="shortcut icon" href="透明LOGO/原始透.png" type="image/x-icon">
+    <title>AiQiji</title>
+</head>
+<style>
+    #loading {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.8);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+    }
+    #loading img {
+        width: 50px;
+        height: 50px;
+    }
+
+    #loading h1 {
+        font-size: 20px;
+        color: #000;
+        margin-left: 10px;
+    }
+</style>
+<body>
+    <!--加载动画-->
+    <div id="loading">
+        <img src="img/加载.gif" alt="Loading..." />
+        <h1>加载中...</h1>
+    </div>
+    
+    <div class="toubu">
+
+        <a href="#"><img class="logo" src="透明LOGO/冬天透.png" alt="logo">
+        </a>
+        <h1 class="logotext">AiQiji</h1>
+        <!--列表-->
+        <div class="liebiao">
+                <a href="index.html">首页</a></li>
+                <a href="头部样式/关于我们/index.html">关于我们</a>
+                <a href="头部样式/软件中心/index.html">软件中心</a>
+                <a href="头部样式/博客/index.html">博客中心</a>
+                <a href="头部样式/联系我们/index.html">联系我们</a>
+        </div>
+
+        <div class="liebiao1">
+            <a href="index.html"></a><img src="img/主页.png" alt="主页"></li>
+            <a href="头部样式/关于我们/index.html"><img src="img/关于.png" alt="关于"></a>
+            <a href="头部样式/软件中心/index.html"><img src="img/软件.png" alt="软件"></a>
+            <a href="头部样式/博客/index.html"><img src="img/博客.png" alt="博客"></a>
+            <a href="头部样式/联系我们/index.html"><img src="img/联系.png" alt="联系"></a>
+        </div>
+
+
+        <div class="sousuo">
+            <input class="shuru" type="text" placeholder="请输入查找的关键字" id="search">
+            <button>搜索</button>
+        </div>
+    </div>
+
+    <div class="zhuti">
+        <!--<div class="lunbo">
+                <img src="img/轮播图/原始.png" alt="lunbotu">
+                <img src="img/轮播图/春天.png" alt="lunbotu">
+                <img src="img/轮播图/夏天.png" alt="lunbotu">
+                <img src="img/轮播图/秋天.png" alt="lunbotu">
+                <img src="img/轮播图/冬天.png" alt="lunbotu">
+                <button class="arrow left">👈</button>
+                <button class="arrow right">👉</button>
+        </div>-->
+        <div class="jieshao">
+            <img class="Mylogo" src="透明LOGO/原始透.png" alt="My logo">
+            <h1>关于AiQiji(爱奇吉)</h1>
+            <p>我们是一个由四人组成的团队，我们的宗旨是为客户提供最好的软件服务，我们的目标是成为最好的软件开发公司.
+                真的很感谢您能来到我们的网站，如果您有什么问题，可以通过以下方式联系我们，我们会尽快回复您的问题，<samp class="xiexie">谢谢！</samp>
+            </p>
+            <p class="jieshaojiaocheng">网站使用教程：<br>
+            上方头部栏内，文字可点击跳转相应的界面，左边的LOGO点击后会回到此页面的最顶部，
+        也就是说，当你在最下方浏览时，突然想回到顶部，就点击左上角LOGO就OK。</p>
+        </div>
+    </div>
+
+    <div class="liuyan">
+        <h1>留言板</h1>
+        <div class="xianshiliuyan" id="messagesDisplay"></div>
+        
+        <form id="messageForm">
+            <textarea id="messageText" placeholder="输入你的留言..."></textarea>
+            <button type="submit">提交留言</button>
+        </form>
+    </div>
+
+    <!--底部-->
+    <div class="dibu">
+        <div class="联系我们">
+            <h1>关于AiQiji</h1>
+            <p class="hover-underline-animation">公众号：吉吉发掘</p>
+            <p class="hover-underline-animation">邮箱：304028273@qq.com</p>
+            <p class="hover-underline-animation">地址：河南省郑州市郑东新区白沙镇河南信息统计职业学院(白沙校区)635室</p>
+            <!--版权-->
+            <p class="hover-underline-animation">AiQiji Corp©2023.All rights reserved. </p><br>
+            <p class="hover-underline-animation">爱奇吉©️2023保留所有权利</p>
+        </div>
+        <div class="友情链接">
+            <h1>友情链接</h1>
+            <a href="">欢迎互换</a><br>
+            <a href="">欢迎互换</a><br>
+            <a href="">欢迎互换</a><br>
+            <a href="">欢迎互换</a><br>
+            <a href="https://beian.miit.gov.cn/">备案号：豫ICP备2023020388号</a><br>
+            <a href="https://beian.miit.gov.cn/">ICP record number：豫ICP备2023020388号</a>
+        </div>
+
+        <div class="erweima">
+            <img class="gzh" src="img/公众号.png" alt="公众号">
+                <div class="tianjia">
+                    <img class="wx" src="img/微信.png" alt="微信"> 
+                    <img class="qq" src="img/QQ.png" alt="QQ">
+                </div>
+        </div>
+
+        <script>
+            // 模拟异步加载数据
+            window.addEventListener('load', function() {
+                // 延迟3秒后隐藏加载动画
+                setTimeout(function() {
+                    document.getElementById('loading').style.display = 'none';
+                }, 1000); // 1000 毫秒 = 1 秒
+            });
+        </script>
+
+
+</body>
+<script src="script.js"></script>
+</html>
